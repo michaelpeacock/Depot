@@ -5,7 +5,7 @@ class ProductsControllerTest < ActionController::TestCase
     @product = products(:one)
     @update = {
       title:  'Lorem Ipsum',
-      description:  'Wibbles are fun!',
+      description:  'Beer is yummy!',
       image_url:  'lorem.jpg',
       price:  19.95
     }

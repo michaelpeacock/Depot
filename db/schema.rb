@@ -11,9 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160609204852) do
+ActiveRecord::Schema.define(version: 20160612192619) do
+
+  create_table "abouts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "phone"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "email"
+  end
 
   create_table "carts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contact_us", force: :cascade do |t|
+    t.text     "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.text     "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -29,6 +51,12 @@ ActiveRecord::Schema.define(version: 20160609204852) do
   add_index "line_items", ["cart_id"], name: "index_line_items_on_cart_id"
   add_index "line_items", ["product_id"], name: "index_line_items_on_product_id"
 
+  create_table "privacies", force: :cascade do |t|
+    t.text     "privacy_notice"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
   create_table "products", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -36,6 +64,12 @@ ActiveRecord::Schema.define(version: 20160609204852) do
     t.decimal  "price",       precision: 8, scale: 2
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+  end
+
+  create_table "terms", force: :cascade do |t|
+    t.text     "terms"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

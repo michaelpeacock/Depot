@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Privacy notice:</strong>
+  <%= @privacy.privacy_notice %>
+</p>
+
+<%= link_to 'Edit', edit_privacy_path(@privacy) %> |
+<%= link_to 'Back', privacies_path %>

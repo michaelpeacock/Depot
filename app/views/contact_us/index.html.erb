@@ -1,0 +1,31 @@
+<h1>Contact Us</h1>
+
+
+<% about = @abouts[0] %>
+<p>
+	<strong>Name:</strong>
+	<%= about.name %>
+</p>
+
+<p>
+	<strong>Address:</strong>
+	<%= about.address %>
+</p>
+
+<p>
+	<strong>Phone:</strong>
+	<%= about.phone %>
+</p>
+
+
+<p>
+	<strong>Email:</strong>
+	<%= about.email %>
+</p>
+
+<form>
+	Message:<br>
+  <textarea name="comment">Enter message here...</textarea><br>
+  <input type="submit" value="Send">
+ </form>
+

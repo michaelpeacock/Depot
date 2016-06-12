@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pragprog Books Online Store</title>
+  <title>BeerMe Online Store</title>
   <%= stylesheet_link_tag    "application", media: "all",
     "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
@@ -9,16 +9,17 @@
 </head>
 <body class="<%= controller.controller_name %>">
   <div id="banner">
-    <%= image_tag("logo.png") %>
-    <%= @page_title || "Pragmatic Bookshelf" %>
+    <%= image_tag("beer_logo1.png", size: "100x50") %>
+    <%= @page_title || "BeerMe Beer List" %>
   </div>
   <div id="columns">
     <div id="side">
       <ul>
-        <li><a href="http://www....">Home</a></li>
-        <li><a href="http://www..../faq">Questions</a></li>
-        <li><a href="http://www..../news">News</a></li>
-        <li><a href="http://www..../contact">Contact</a></li>
+        <li><%= link_to "Home", store_index_path %></li>
+        <li><%= link_to "About Us", abouts_path %></li>
+        <li><%= link_to "Contact Us", contact_us_path %></li>
+        <li><%= link_to "Privacy Policy", privacies_path %></li>
+        <li><%= link_to "Terms of Service", terms_path %></li>
       </ul>
     </div>
     <div id="main">
