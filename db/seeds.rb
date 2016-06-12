@@ -68,3 +68,9 @@ Product.create!(title: 'Terrapin Wake N Bake',
       </p>},
   image_url: 'terrapin.jpg',
   price: 44.95)
+  
+Fact.create!(fact: %{<p>Light is what makes Beer go bad.</p>})
+Fact.create!(fact: %{<p>A Beer Wave of 388,000 Gallons (or 1.4m L) flooded London in 1814 after a huge vat ruptured.</p>})
+Fact.create!(fact: %{<p>George Washington had his own brewhouse on the grounds of Mount Vernon.</p>})
+Fact.create!(fact: %{<p>Egyptian Pyramid workers were paid with beer: 1 gallon (4L) per day.</p>})
+Fact.create!(fact: %{<p>The oldest known recipe for BEER is over 4,000 years old, made by Sumerians.</p>})

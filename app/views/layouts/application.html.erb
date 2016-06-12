@@ -10,7 +10,7 @@
 <body class="<%= controller.controller_name %>">
   <div id="banner">
     <%= image_tag("beer_logo1.png", size: "100x50") %>
-    <%= @page_title || "BeerMe Beer List" %>
+    <%= @page_title || "BeerMe Online Store" %>
   </div>
   <div id="columns">
     <div id="side">
@@ -22,6 +22,10 @@
         <li><%= link_to "Terms of Service", terms_path %></li>
       </ul>
     </div>
+    <div id="dyk">
+	<p>Did you know...</p>
+	<p>A Beer Wave of 388,000 Gallons (or 1.4m L) flooded London in 1814 after a huge vat ruptured.</p>
+	</div>
     <div id="main">
       <%= yield %>
     </div>
