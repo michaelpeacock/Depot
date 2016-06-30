@@ -7,6 +7,19 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
 #---
 # encoding: utf-8
+Privacy.delete_all
+Privacy.create!(privacy_notice: 'There is no privacy...just enjoy drinking beer')
+
+Term.delete_all
+Term.create!(terms: 'There are no terms of service. Drink beer and be happy!')
+
+About.delete_all
+About.create!(name: 'BeerMe, LLC',
+  address: '123 Beer Way, Philadelphia, PA 19154', 
+  phone: '555-555-5555',
+  description: 'We love beer! We starting drinking the stuff 20 years ago and decided to start selling it. Maybe our next step will be to start brewing it!',
+  email: 'info@beerme.com')
+# . . .
 Product.delete_all
 Product.create!(title: 'Elysian Saison Poivre (Peppercorn Saison)',
   description: 
@@ -69,8 +82,8 @@ Product.create!(title: 'Terrapin Wake N Bake',
   image_url: 'terrapin.jpg',
   price: 44.95)
   
-Fact.create!(fact: %{<p>Light is what makes Beer go bad.</p>})
-Fact.create!(fact: %{<p>A Beer Wave of 388,000 Gallons (or 1.4m L) flooded London in 1814 after a huge vat ruptured.</p>})
-Fact.create!(fact: %{<p>George Washington had his own brewhouse on the grounds of Mount Vernon.</p>})
-Fact.create!(fact: %{<p>Egyptian Pyramid workers were paid with beer: 1 gallon (4L) per day.</p>})
-Fact.create!(fact: %{<p>The oldest known recipe for BEER is over 4,000 years old, made by Sumerians.</p>})
+Fact.create!(fact: %{Light is what makes Beer go bad.})
+Fact.create!(fact: %{A Beer Wave of 388,000 Gallons (or 1.4m L) flooded London in 1814 after a huge vat ruptured.})
+Fact.create!(fact: %{George Washington had his own brewhouse on the grounds of Mount Vernon.})
+Fact.create!(fact: %{Egyptian Pyramid workers were paid with beer: 1 gallon (4L) per day.})
+Fact.create!(fact: %{The oldest known recipe for BEER is over 4,000 years old, made by Sumerians.})

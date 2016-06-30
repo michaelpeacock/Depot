@@ -1,5 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+
+  def index
+    @facts = Fact.all    
+  end
     
   private
     def current_cart 
