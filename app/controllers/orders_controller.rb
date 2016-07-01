@@ -1,5 +1,10 @@
 class OrdersController < ApplicationController
+  skip_before_action :authorize
+
+  include CurrentCart
+  before_action :set_cart, only: [:new, :create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
+
   # GET /orders
   # GET /orders.json
   def index
@@ -14,7 +19,6 @@ class OrdersController < ApplicationController
   # GET /orders/new
   # GET /orders/new.json
   def new
-    @cart = current_cart
     if @cart.line_items.empty?
       redirect_to store_url, notice: "Your cart is empty"
     return
@@ -37,7 +41,7 @@ class OrdersController < ApplicationController
   # POST /orders.json
   def create
     @order = Order.new(order_params)
-    @order.add_line_items_from_cart(current_cart)
+    @order.add_line_items_from_cart(@cart)
 
     respond_to do |format|
       if @order.save

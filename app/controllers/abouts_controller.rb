@@ -1,4 +1,6 @@
 class AboutsController < ApplicationController
+  skip_before_action :authorize
+
   before_action :set_about, only: [:show, :edit, :update, :destroy]
 
   # GET /abouts

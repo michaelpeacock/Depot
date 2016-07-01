@@ -1,4 +1,7 @@
 class PrivaciesController < ApplicationController
+  skip_before_action :authorize
+
+
   before_action :set_privacy, only: [:show, :edit, :update, :destroy]
 
   # GET /privacies

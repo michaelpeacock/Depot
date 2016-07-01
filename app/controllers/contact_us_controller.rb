@@ -1,4 +1,6 @@
 class ContactUsController < ApplicationController
+  skip_before_action :authorize
+
   before_action :set_contact_u, only: [:show, :edit, :update, :destroy]
 
   # GET /contact_us
